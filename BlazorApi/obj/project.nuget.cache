@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "CbWXXMFL267jqaLDxl/pCaLIDuh4M98O+w+4jdsuPPFngGLHtdejMOX7fdOh2wB9FDYQ/H3jECL6rFQZrAvAIw==",
+  "dgSpecHash": "PKCGywCM3P61c5/5Iyiuv0zGQNkpF3lnssd9bGWzJE69JrW0192yw+3xZHCJsfXtHB2Y4o+oxrjjSj6DysmoEQ==",
   "success": true,
   "projectFilePath": "E:\\gitProjs\\blazorApi\\blazorapiService\\blazorapiService\\BlazorApi\\BlazorApi.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Dell\\.nuget\\packages\\bootstrap\\4.5.3\\bootstrap.4.5.3.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\jquery\\3.0.0\\jquery.3.0.0.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\popper.js\\1.16.1\\popper.js.1.16.1.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\system.text.json\\5.0.0\\system.text.json.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
