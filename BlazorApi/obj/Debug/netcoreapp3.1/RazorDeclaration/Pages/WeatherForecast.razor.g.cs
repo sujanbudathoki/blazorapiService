@@ -75,6 +75,21 @@ using BlazorApi.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 10 "E:\gitProjs\blazorApi\blazorapiService\blazorapiService\BlazorApi\_Imports.razor"
+using System.Net.Http.Json;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "E:\gitProjs\blazorApi\blazorapiService\blazorapiService\BlazorApi\_Imports.razor"
+using Model;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/WeatherForecast")]
     public partial class WeatherForecast : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -82,6 +97,35 @@ using BlazorApi.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 37 "E:\gitProjs\blazorApi\blazorapiService\blazorapiService\BlazorApi\Pages\WeatherForecast.razor"
+       
+
+    WeatherDataModel weatherdata;
+    string errorstring;
+    protected override async Task OnInitializedAsync()
+    {
+        var request = new HttpRequestMessage(HttpMethod.Get, "https://www.metaweather.com/api/location/2471217/");
+        var client = _clientFactory.CreateClient();
+        HttpResponseMessage response = await client.SendAsync(request);
+        if(response.IsSuccessStatusCode)
+        {
+            weatherdata = await response.Content.ReadFromJsonAsync<WeatherDataModel>();
+            errorstring = null;
+        }
+        else
+        {
+            errorstring = response.ReasonPhrase;
+        }
+
+
+
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IHttpClientFactory _clientFactory { get; set; }
     }
 }
 #pragma warning restore 1591

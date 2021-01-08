@@ -5,11 +5,9 @@ using System.Threading.Tasks;
 
 namespace BlazorApi.Model
 {
-    public partial class WeatherData
-    {
+   
 
-
-        public class WeatherDataRoot
+        public class WeatherDataModel
         {
             public Consolidated_Weather[] consolidated_weather { get; set; }
             public DateTime time { get; set; }
@@ -27,4 +25,4 @@ namespace BlazorApi.Model
 
        
     }
-}
+

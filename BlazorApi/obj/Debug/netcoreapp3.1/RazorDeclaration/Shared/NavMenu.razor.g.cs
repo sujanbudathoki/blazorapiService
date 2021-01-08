@@ -75,6 +75,20 @@ using BlazorApi.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 10 "E:\gitProjs\blazorApi\blazorapiService\blazorapiService\BlazorApi\_Imports.razor"
+using System.Net.Http.Json;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "E:\gitProjs\blazorApi\blazorapiService\blazorapiService\BlazorApi\_Imports.razor"
+using Model;
+
+#line default
+#line hidden
+#nullable disable
     public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -83,7 +97,7 @@ using BlazorApi.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "E:\gitProjs\blazorApi\blazorapiService\blazorapiService\BlazorApi\Shared\NavMenu.razor"
+#line 29 "E:\gitProjs\blazorApi\blazorapiService\blazorapiService\BlazorApi\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

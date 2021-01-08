@@ -75,6 +75,20 @@ using BlazorApi.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 10 "E:\gitProjs\blazorApi\blazorapiService\blazorapiService\BlazorApi\_Imports.razor"
+using System.Net.Http.Json;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "E:\gitProjs\blazorApi\blazorapiService\blazorapiService\BlazorApi\_Imports.razor"
+using Model;
+
+#line default
+#line hidden
+#nullable disable
     public partial class SurveyPrompt : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

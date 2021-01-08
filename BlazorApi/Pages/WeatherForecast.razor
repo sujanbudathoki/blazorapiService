@@ -1,5 +1,68 @@
-﻿<h3>Component</h3>
+﻿@page "/WeatherForecast"
+
+@inject IHttpClientFactory _clientFactory 
+<h3>Weather Forecast</h3>
+@if(string.IsNullOrWhiteSpace(errorstring))
+{
+    <div class="alert">@errorstring</div>
+}
+else if(weatherdata==null)
+{
+    <div class="alert">Loading</div>
+}
+else
+{
+    <table class="table table-striped">
+        <thead class="thead-dark">
+
+      
+        <tr>
+            <th>Date</th>
+            <th>Weather</th>
+            <th>Low</th>
+            <th>High</th>
+        </tr>
+</thead>
+        <tbody>
+           @foreach(var model in weatherdata.consolidated_weather)
+           {
+               <tr>
+                   <td>@model.created</td>
+                   <td>@model.the_temp</td>
+                   <td>@model.min_temp</td>
+                   <td>@model.max_temp</td>
+               </tr>
+           }
+        </tbody>
+        
+    </table>
+}
+
 
 @code {
 
+   public WeatherDataModel weatherdata;
+    string errorstring;
+    protected override async Task OnInitializedAsync()
+    {
+        var request = new HttpRequestMessage(HttpMethod.Get, "https://www.metaweather.com/api/location/2471217/");
+        var client = _clientFactory.CreateClient();
+        HttpResponseMessage response = await client.SendAsync(request);
+        if(response.IsSuccessStatusCode)
+        {
+            weatherdata = await response.Content.ReadFromJsonAsync<WeatherDataModel>();
+            errorstring = null;
+        }
+        else
+        {
+            errorstring = response.ReasonPhrase;
+        }
+
+
+
+    }
 }
+
+
+
+

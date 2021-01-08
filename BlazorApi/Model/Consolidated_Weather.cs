@@ -2,8 +2,7 @@
 
 namespace BlazorApi.Model
 {
-    public partial class WeatherData
-    {
+   
         public class Consolidated_Weather
         {
             public long id { get; set; }
@@ -25,4 +24,4 @@ namespace BlazorApi.Model
 
        
     }
-}
+
